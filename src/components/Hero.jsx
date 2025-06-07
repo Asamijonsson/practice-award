@@ -6,7 +6,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
-
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
   const [hasClicked, sethasClicked] = useState(false);
@@ -56,11 +55,11 @@ const Hero = () => {
   );
 
   useGSAP(() => {
-    gsap.set("#video-frame", {
-      clipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
-      WebkitClipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
-      borderRadius: "0% 0% 40% 10%",
-    });
+    // gsap.set("#video-frame", {
+    //   clipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
+    //   WebkitClipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
+    //   borderRadius: "0% 0% 40% 10%",
+    // });
     gsap.from("#video-frame", {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       borderRadius: "0% 0% 0% 0%",
@@ -93,7 +92,7 @@ const Hero = () => {
           clipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
         }}
         id="video-frame"
-        className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75"
+        className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75 video-frame"
       >
         <div>
           <div className="mask-clip-path absolute-center absolute z-50 size64 cursor-pointer overflow-hidden rounded-lg">
